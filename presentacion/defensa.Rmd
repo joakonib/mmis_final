@@ -1,9 +1,9 @@
 ---
-title: "Seminario II:"
-subtitle: "Aprovechamiento de paradatos en II ENUT"  
+title: "Aprovechamiento de paradatos:"
+subtitle: "Aplicaciones dentro de la II Encuesta Nacional Sobre Uso del Tiempo"  
 author: 
   - "Joaquín E. Galdames Hernández"
-date: "08/10/2024"
+date: "27/01/2025"
 output:
   xaringan::moon_reader:
     css: "xaringan-themer.css"
@@ -22,14 +22,14 @@ output:
 ---
 ```{css, echo=FALSE}
 .title-slide {
-  background-image: url(https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/logoudp.png);
+  background-image: url(https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/logoudp.png);
   background-position: 10% 15%;
   background-size: 150px;
   padding-right: 100px;  /* delete this for 4:3 aspect ratio */
 }
 
 .title {
-  margin-bottom: 20px; /* Espacio inferior entre la imagen y el título */
+  margin-bottom: 30px; /* Espacio inferior entre la imagen y el título */
 }
 ```
 
