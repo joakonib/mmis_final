@@ -158,11 +158,12 @@ knitr::opts_chunk$set(
 
 class: inverse, middle
 
-<br>
+
 <br>
 
- ```{r logoine, out.width='100%', echo = F, fig.align='center'}
+ ```{r logoine, out.width='10%', echo = F, fig.align='left'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/logoine.png")
+
  ```
 
 # Contexto INE
