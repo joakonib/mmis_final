@@ -214,8 +214,6 @@ Para la ejecución y gestión de las encuestas, la institución utiliza la plata
 
 
  ```
-<!-- https://github.com/joakonib/mmis_final/blob/main/assets/logo/gsbpm2.png?raw=true -->
-]
 
 .panel[.panel-name[¿Qué se midió?]
 
@@ -381,6 +379,47 @@ class: inverse, middle
 
 ---
 
+# Dimensión II: Duración de la encuesta - CH
+
+.panelset[
+.panel[.panel-name[Distribución]
+
+]
+
+.panel[.panel-name[Tabla]
+
+
+
+```{r}
+# Datos de la tabla
+tabla <- data.frame(
+  "N Integrantes del Hogar" = c(
+    "1 integrante", "2 integrantes", "3 integrantes",
+    "4 integrantes", "5 integrantes", "6 o más integrantes", "Total"
+  ),
+  "Frecuencia" = c(30, 402, 918, 1234, 821, 787, 4192),
+  "Porcentaje" = c("1%", "10%", "22%", "29%", "20%", "19%", "100%")
+)
+
+# Crear la tabla con kable
+kable(tabla, format = "latex", booktabs = TRUE, align = "c",
+      col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
+  kable_styling(latex_options = c("striped", "hold_position", "scale_down")) %>%
+  add_header_above(c(" " = 1, " " = 2)) %>%
+  row_spec(7, bold = TRUE) %>%
+  footnote(general = "Fuente: Elaboración propia", threeparttable = TRUE)
+
+```
+ 
+
+
+
+]
+
+]
+
+---
+
 class: inverse, middle
 
 <br>
@@ -417,9 +456,21 @@ Hay presencia de heterocedasticidad y los errores no se distribuyen de manera no
  ```{r plot2, out.width='80%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/plot2.png")
 
-
  ```
+---
 
+# Dimensión II: Duración de la encuesta - CUT
+
+.panelset[
+.panel[.panel-name[Distribución]
+
+]
+
+.panel[.panel-name[Tabla]
+
+]
+
+]
 
 ---
 
@@ -434,6 +485,10 @@ class: inverse, middle
 
 ---
 
+
+# Dimensión III: Flujos de llenado de respuestas
+
+---
 
 
 
