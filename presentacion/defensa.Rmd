@@ -201,9 +201,17 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 A partir del 2020 el Instituto Nacional de Estadísticas dejó de utilizar la metodología PAPI - Paper and Pencil Interviewing - para la recolección oficial de sus distintos productos estadísticos.
                             
 Para la ejecución y gestión de las encuestas, la institución utiliza la plataforma de Survey Solutions – SuSo por sus siglas. Dentro de esta plataforma es posible encontrar una fuente de insumos llamada los paradatos.
+<<<<<<< HEAD
                             
 ¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013). 
 ]
+=======
+
+¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013).
+
+
+ ```
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 
 .panel[.panel-name[¿Qué se midió?]
                                           
@@ -376,19 +384,28 @@ class: inverse, middle
 .panelset[
 .panel[.panel-name[Distribución]
 
+<<<<<<< HEAD
 Distribución de tiempos de aplicación entrevistas
 
  ```{r tiempo_ch, out.width='70%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/tiempo_ch.png")
  ```
 
+=======
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 ]
 
 .panel[.panel-name[Tabla]
 
+<<<<<<< HEAD
 Frecuencia de N de Integrantes en el hogar por sobre el P75 (19:52 min)
 
 ```{r  echo=FALSE, results='asis'}
+=======
+
+
+```{r}
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 # Datos de la tabla
 tabla <- data.frame(
   "N Integrantes del Hogar" = c(
@@ -399,6 +416,7 @@ tabla <- data.frame(
   "Porcentaje" = c("1%", "10%", "22%", "29%", "20%", "19%", "100%")
 )
 
+<<<<<<< HEAD
 # Crear la tabla en formato HTML para xaringan
 kable(tabla, format = "html", align = "c",
       col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
@@ -411,16 +429,32 @@ kable(tabla, format = "html", align = "c",
 ```
  
 Los hogares donde el Cuestionario del Hogar tuvo una mayor extensión en el tiempo de su entrevista corresponde fundamentalmente a hogares desde 3 personas integrantes.
+=======
+# Crear la tabla con kable
+kable(tabla, format = "latex", booktabs = TRUE, align = "c",
+      col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
+  kable_styling(latex_options = c("striped", "hold_position", "scale_down")) %>%
+  add_header_above(c(" " = 1, " " = 2)) %>%
+  row_spec(7, bold = TRUE) %>%
+  footnote(general = "Fuente: Elaboración propia", threeparttable = TRUE)
+
+```
+ 
+
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 
 
 ]
 
+<<<<<<< HEAD
 .panel[.panel-name[Modelo Lineal]
 
 Se aplicó un modelo de regresión lineal para predecir los tiempos de duración del CH
 
 
 ]
+=======
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 ]
 
 ---
@@ -469,8 +503,11 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 .panelset[
 .panel[.panel-name[Distribución]
 
+<<<<<<< HEAD
 Distribución de tiempos de aplicación entrevistas
 
+=======
+>>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 ]
 
 .panel[.panel-name[Tabla]
