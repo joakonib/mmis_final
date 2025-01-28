@@ -152,7 +152,7 @@ knitr::opts_chunk$set(
 
 # Demanda Institucional
 
-## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT]
+## .content-box-purple[A través del aprovechamiento de los paradatos documentar prácticas realizadas en recolección]
 
 ---
 
@@ -186,7 +186,23 @@ Respecto a las Encuestas sobre el Uso del Tiempo, que nacen de la necesidad de c
 ]
 .panel[.panel-name[Producción Estadística]
 
-asdf
+ ```{r gsbpm, out.width='75%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/gsbpm2.png")
+ ```
+
+]
+.panel[.panel-name[Recolección]
+
+A partir del 2020 el Instituto Nacional de Estadísticas dejó de utilizar la metodología PAPI - Paper and Pencil Interviewing - para la recolección oficial de sus distintos productos estadísticos.
+
+Para la ejecución y gestión de las encuestas, la institución utiliza la plataforma de Survey Solutions – SuSo por sus siglas. Dentro de esta plataforma es posible encontrar una fuente de insumos llamada los paradatos.
+
+¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013).
+
+
+ ```
+<!-- https://github.com/joakonib/mmis_final/blob/main/assets/logo/gsbpm2.png?raw=true -->
+
 
 ]
 ]
@@ -243,21 +259,24 @@ class: inverse, middle
 
 
 ---
+
+# Metodología
 .panelset[
 .panel[.panel-name[Descripción]
 
-- Estudio cuantitativo exploratorio
+- Estudio cuantitativo exploratorio y descriptivo
 
 - Unidad de Análisis: Proceso de recolección de CH y CUT. En particular tiempo de duración de cuestionarios y flujo de llenado de respuestas.
 
 - Fuente de información: Paradatos (generada automáticamente) y posteriormente enriquecida con información respecto a caracterísitcas del hogar y características sociodemográficas de personas encuestadoras.
 
+]
+.panel[.panel-name[Ejemplo de paradatos]
 ```{r parad, echo=FALSE, include = T, out.width="60%", out.heigth="60%"}
 library(tidyverse)
 
 test_data <- 
-readRDS(url("https://github.com/joakonib/defensa_tesis/raw/main/input/paradata_f.rds")) %>% 
-  filter(!order %in% c(40,55,56))
+readRDS(url("https://github.com/joakonib/mmis_final/raw/refs/heads/main/input/paradatos.RDS"))
 
 test_data %>%
   kable("html", col.names = colnames(test_data), escape = FALSE) %>%
@@ -268,6 +287,14 @@ test_data %>%
   scroll_box(width = "100%", height = "500px")
 
 ```
+]
+.panel[.panel-name[Análisis]
+
+- A partir de las bases de datos paradatos_ch y paradatos_cut, se sintetiza la información extensa con el objetivo de generar análisis descriptivos. 
+
+- Hay presencia de análisis descriptivos univariados y bivariados. Se realizó pruebas de chi-cuadrado para testear dependencia.
+
+- Finalmente se empleó un modelo de regresión lineal para predecir los tiempos de duración del Cuestionario del Hogar (perspectiva exploratoria - Fox, 2008).
 
 
 ]
