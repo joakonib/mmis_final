@@ -1,0 +1,177 @@
+---
+title: "Seminario II:"
+subtitle: "Aprovechamiento de paradatos en II ENUT"  
+author: 
+  - "Joaquín E. Galdames Hernández"
+date: "08/10/2024"
+output:
+  xaringan::moon_reader:
+    css: "xaringan-themer.css"
+    # css: [default, metropolis, metropolis-fonts,xaringan-themer.css]
+    self_contained: true
+    nature:
+      df_print: paged
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      yolo: false
+      countIncrementalSlides: true
+      navigation:
+      scroll: false # disable slide transitions by scrolling
+---
+```{css, echo=FALSE}
+.title-slide {
+  background-image: url(https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/logoudp.png);
+  background-position: 10% 15%;
+  background-size: 150px;
+  padding-right: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+.title {
+  margin-bottom: 20px; /* Espacio inferior entre la imagen y el título */
+}
+```
+
+```{r xaringan, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+library(mediocrethemes)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+style_mono_accent(base_color = "#43418A")
+xaringan_mediocre(pal = "coty")
+xaringanExtra::use_panelset()
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+```{css, echo=FALSE}
+.content-box { 
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+}
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  box-sizing: border-box;
+  border-radius: 0px; /* Mantener esquinas cuadradas */
+  margin: 0 0 10px; /* Ajustar margen según sea necesario */
+  overflow: hidden;
+  padding: 10px 15px; /* Ajustar padding según sea necesario */
+  display: inline-block; /* Ajustar tamaño de la caja al contenido */
+  width: auto; /* Ajustar ancho según contenido */
+}
+.content-box-blue { background-color: #F0F8FF; }
+.content-box-gray { background-color: #e2e2e2; }
+.content-box-grey { background-color: #F5F5F5; }
+.content-box-army { background-color: #737a36; }
+.content-box-green { background-color: #d9edc2; }
+.content-box-purple { background-color: #e2e2f9; }
+.content-box-red { background-color: #ffcccc; }
+.content-box-yellow { background-color: #fef5c4; }
+.content-box-blue .remark-inline-code,
+.content-box-blue .remark-inline-code,
+.content-box-gray .remark-inline-code,
+.content-box-grey .remark-inline-code,
+.content-box-army .remark-inline-code,
+.content-box-green .remark-inline-code,
+.content-box-purple .remark-inline-code,
+.content-box-red .remark-inline-code,
+.content-box-yellow .remark-inline-code { 
+  background: none;
+}
+
+.full-width {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+}
+```
+```{css kable, echo=F}
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+
+    /* Change the background color to white for shaded rows (even rows) */
+
+    .remark-slide thead, .remark-slide tr:nth-child(2n) {
+        background-color: white;
+    }
+    
+    body {
+    text-align: justify;
+}
+
+.centered-iframe {
+  display: block;
+  margin: 0 auto; /* Margen automático a la izquierda y derecha */
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+
+```
+
+
+<br>
+<br>
+
+`r fontawesome::fa("pen-fancy", height = "3em", fill = "#43418A")`
+
+# Demanda Institucional
+
+## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT con el fin de optimizar futuras mediciones.]
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("bullseye", height = "3em", fill = "white")`
+
+# Pregunta y Objetivos
+
+
+---
+
+class: inverse, center
+
+# ¡Gracias por su tiempo! 🐱
+
+```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/seminario_ii/main/assets/logo/000024.JPG")
+```
