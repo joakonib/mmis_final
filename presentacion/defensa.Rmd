@@ -384,28 +384,23 @@ class: inverse, middle
 .panelset[
 .panel[.panel-name[Distribución]
 
-<<<<<<< HEAD
+
 Distribución de tiempos de aplicación entrevistas
 
  ```{r tiempo_ch, out.width='70%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/tiempo_ch.png")
  ```
 
-=======
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
+
 ]
 
 .panel[.panel-name[Tabla]
 
-<<<<<<< HEAD
+
 Frecuencia de N de Integrantes en el hogar por sobre el P75 (19:52 min)
 
 ```{r  echo=FALSE, results='asis'}
-=======
 
-
-```{r}
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 # Datos de la tabla
 tabla <- data.frame(
   "N Integrantes del Hogar" = c(
@@ -416,7 +411,7 @@ tabla <- data.frame(
   "Porcentaje" = c("1%", "10%", "22%", "29%", "20%", "19%", "100%")
 )
 
-<<<<<<< HEAD
+
 # Crear la tabla en formato HTML para xaringan
 kable(tabla, format = "html", align = "c",
       col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
@@ -429,19 +424,10 @@ kable(tabla, format = "html", align = "c",
 ```
  
 Los hogares donde el Cuestionario del Hogar tuvo una mayor extensión en el tiempo de su entrevista corresponde fundamentalmente a hogares desde 3 personas integrantes.
-=======
-# Crear la tabla con kable
-kable(tabla, format = "latex", booktabs = TRUE, align = "c",
-      col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
-  kable_styling(latex_options = c("striped", "hold_position", "scale_down")) %>%
-  add_header_above(c(" " = 1, " " = 2)) %>%
-  row_spec(7, bold = TRUE) %>%
-  footnote(general = "Fuente: Elaboración propia", threeparttable = TRUE)
+
 
 ```
  
-
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 
 
 ]
@@ -453,8 +439,7 @@ Se aplicó un modelo de regresión lineal para predecir los tiempos de duración
 
 
 ]
-=======
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
+
 ]
 
 ---
