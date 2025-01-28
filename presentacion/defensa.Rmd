@@ -177,16 +177,29 @@ name: contexto ine
 ## Contexto Institucional
 
 .panelset[
-.panel[.panel-name[¿Qué es el INE?]
+.panel[.panel-name[¿Qué es la II ENUT?]
 
-El Instituto Nacional de Estadísticas (INE) es la entidad nacional de estadísticas de Chile y el ente rector del Sistema Estadístico Nacional (SEN). Por esta razón, la información que recolecta y procesa debe cumplir con criterios internacionales y reflejar la complejidad del territorio nacional, tanto en términos de comportamiento poblacional como en aspectos operativos.
+La Encuesta Nacional Sobre Uso del Tiempo (ENUT) es una medición que permite “obtener información de cómo las personas de 12 años o más utilizan su tiempo, principalmente, en torno al trabajo no remunerado, trabajo en la ocupación y actividades personales; además de proveer información relacionada a su calidad de vida y bienestar respecto al uso del tiempo, en las principales zonas urbanas del país.” (INE, 2025)
 
-Respecto a las Encuestas sobre el Uso del Tiempo, que nacen de la necesidad de cumplir con compromisos internacionales, tales como los acuerdos establecidos en 19° Conferencia Internacional de Estadísticas del Trabajo (ILO, 2013). Además, estas mediciones se encuentran alineadas con los Objetivos de Desarrollo Sostenible (ODS), específicamente con el ODS número 5, que promueve la igualdad de género, contribuyendo así a generar datos relevantes que informen políticas públicas para avanzar en la equidad entre hombres y mujeres (CEPAL, 2024).
+Tiempo y participación destinada al trabajo no remunerado en la población de 12 años y más según sexo en un día tipo:
+```{r plot1, out.width='40%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/plot1.png")
+```
+]
+.panel[.panel-name[Precisiones]
+
+La recolección de esta medición se realizó durante los meses de agosto a diciembre del año 2023. Esta encuesta tiene un muestreo con una representatividad urbana y por sexo dentro de todas las regiones del país y tiene una muestra objetivo de 15.490 viviendas para las cuales se necesitó un total de 390 personas encuestadoras (INE, 2025). 
+
+
+```{r cuestionarios, out.width='40%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/cuestionarios.png")
+```
+
 
 ]
 .panel[.panel-name[Producción Estadística]
 
- ```{r gsbpm, out.width='75%', echo = F, fig.align='center'}
+ ```{r gsbpm, out.width='65%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/gsbpm2.png")
  ```
 
@@ -206,6 +219,16 @@ Para la ejecución y gestión de las encuestas, la institución utiliza la plata
 
 ]
 ]
+
+---
+
+### ¡Ahora vamos a los objetivos!
+
+<p class="slide-in">
+  <img src="https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/dale-likes.gif"
+       style="display: block; margin: 0 auto; width: 80%; height: 80%;">
+</p>
+
 
 
 ---
