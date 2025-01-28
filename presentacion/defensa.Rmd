@@ -188,46 +188,36 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 ]
 .panel[.panel-name[Precisiones]
 
-La recolección de esta medición se realizó durante los meses de agosto a diciembre del año 2023. Esta encuesta tiene un muestreo con una representatividad urbana y por sexo dentro de todas las regiones del país y tiene una muestra objetivo de 15.490 viviendas para las cuales se necesitó un total de 390 personas encuestadoras (INE, 2025). 
+La recolección de esta medición se realizó durante los meses de agosto a diciembre del año 2023. Esta encuesta tiene un muestreo con una representatividad urbana y por sexo dentro de todas las regiones del país y tiene una muestra objetivo de 15.490 viviendas para las cuales se necesitó un total de 390 personas encuestadoras (INE, 2025).
 
 
 ```{r cuestionarios, out.width='40%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/cuestionarios.png")
 ```
-
-
 ]
-.panel[.panel-name[Producción Estadística]
 
- ```{r gsbpm, out.width='65%', echo = F, fig.align='center'}
-knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/gsbpm2.png")
- ```
-
-]
 .panel[.panel-name[Recolección]
 
 A partir del 2020 el Instituto Nacional de Estadísticas dejó de utilizar la metodología PAPI - Paper and Pencil Interviewing - para la recolección oficial de sus distintos productos estadísticos.
-
+                            
 Para la ejecución y gestión de las encuestas, la institución utiliza la plataforma de Survey Solutions – SuSo por sus siglas. Dentro de esta plataforma es posible encontrar una fuente de insumos llamada los paradatos.
-
-¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013).
-
-
- ```
-<!-- https://github.com/joakonib/mmis_final/blob/main/assets/logo/gsbpm2.png?raw=true -->
+                            
+¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013). 
 ]
 
 .panel[.panel-name[¿Qué se midió?]
-
+                                          
 ### Tiempos de Aplicación:
-
+                                          
 Uno de estos aspectos se refiere a la aplicación del CUT, el cual debe ser aplicado en su totalidad en un solo día a la persona entrevistada. Esto se debe a que, al realizar la entrevista, se pregunta por un día específico, y alejarse del período de referencia puede comprometer la calidad del dato, ya que la persona entrevistada tendería a responder sobre un "día tipo" en lugar de referirse a la fecha exacta (Chang & Krosnick, 2003).
-
+                                          
 ### Flujos de Respuesta:
-
+                                          
 Como señala Fowler (2013), el flujo sobre el cómo se responde una encuesta puede afectar la manera en que la calidad del dato es observada. En el caso particular de la II ENUT, es necesario considerar que una vez iniciado un CUT en el hogar no es posible modificar respuestas en el CH que signifiquen cambios sociodemográficos en el hogar. Por ejemplo, cambiar la respuesta de una persona respecto a su situación de estudios ya que esto afecta a los distintos cuestionarios a aplicar.
+
 ]
 ]
+
 
 ---
 
@@ -381,6 +371,60 @@ class: inverse, middle
 
 ---
 
+# Dimensión II: Duración de la encuesta - CH
+
+.panelset[
+.panel[.panel-name[Distribución]
+
+Distribución de tiempos de aplicación entrevistas
+
+ ```{r tiempo_ch, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/tiempo_ch.png")
+ ```
+
+]
+
+.panel[.panel-name[Tabla]
+
+Frecuencia de N de Integrantes en el hogar por sobre el P75 (19:52 min)
+
+```{r  echo=FALSE, results='asis'}
+# Datos de la tabla
+tabla <- data.frame(
+  "N Integrantes del Hogar" = c(
+    "1 integrante", "2 integrantes", "3 integrantes",
+    "4 integrantes", "5 integrantes", "6 o más integrantes", "Total"
+  ),
+  "Frecuencia" = c(30, 402, 918, 1234, 821, 787, 4192),
+  "Porcentaje" = c("1%", "10%", "22%", "29%", "20%", "19%", "100%")
+)
+
+# Crear la tabla en formato HTML para xaringan
+kable(tabla, format = "html", align = "c",
+      col.names = c("N Integrantes del Hogar", "Frecuencia", "Porcentaje")) %>%
+  kable_styling(full_width = FALSE, position = "center", 
+                bootstrap_options = c("striped", "hover"), 
+                font_size = 16) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#43418A") %>%  # Encabezado en color
+  row_spec(7, bold = TRUE, background = "#43418A", color = "white")      # Fila "Total" resaltada
+
+```
+ 
+Los hogares donde el Cuestionario del Hogar tuvo una mayor extensión en el tiempo de su entrevista corresponde fundamentalmente a hogares desde 3 personas integrantes.
+
+
+]
+
+.panel[.panel-name[Modelo Lineal]
+
+Se aplicó un modelo de regresión lineal para predecir los tiempos de duración del CH
+
+
+]
+]
+
+---
+
 class: inverse, middle
 
 <br>
@@ -417,9 +461,23 @@ Hay presencia de heterocedasticidad y los errores no se distribuyen de manera no
  ```{r plot2, out.width='80%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/plot2.png")
 
-
  ```
+---
 
+# Dimensión II: Duración de la encuesta - CUT
+
+.panelset[
+.panel[.panel-name[Distribución]
+
+Distribución de tiempos de aplicación entrevistas
+
+]
+
+.panel[.panel-name[Tabla]
+
+]
+
+]
 
 ---
 
@@ -434,6 +492,10 @@ class: inverse, middle
 
 ---
 
+
+# Dimensión III: Flujos de llenado de respuestas
+
+---
 
 
 
