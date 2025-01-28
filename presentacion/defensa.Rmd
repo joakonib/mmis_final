@@ -161,6 +161,20 @@ class: inverse, middle
 <br>
 <br>
 
+ ```{r profe-berta, out.width='100%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/profeberta.jpg")
+ ```
+
+# Contexto INE
+
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
 `r fontawesome::fa("bullseye", height = "3em", fill = "white")`
 
 # Pregunta y Objetivos
