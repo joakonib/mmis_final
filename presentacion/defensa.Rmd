@@ -1,6 +1,6 @@
 ---
 title: "Aprovechamiento de paradatos:"
-subtitle: "Aplicaciones dentro de la II Encuesta Nacional Sobre Uso del Tiempo"  
+subtitle: "Aplicaciones dentro de la II ENUT"  
 author: 
   - "Joaquín E. Galdames Hernández"
 date: "28/01/2025"
@@ -365,6 +365,49 @@ class: inverse, middle
 `r fontawesome::fa("folder", height = "3em", fill = "white")`
 
 # Dimensión I: Botones de Tiempo
+---
+# Dimensión I: Botones de Tiempo
+
+.panelset[
+  .panel[.panel-name[Gráfico]
+         
+Aplicación de botones de tiempo según cuestionario
+         
+```{r botones, out.width='70%', echo = F, fig.align='center'}
+         knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/botones.png")
+```
+
+         
+  ]
+
+.panel[.panel-name[Según experiencia]
+         
+Se presenta el uso de los botones según experiencia previa en INE
+         
+```{r  echo=FALSE, results='asis'}
+         # Datos de la tabla
+         tabla0 <- data.frame(
+           "Experiencia previa en INE" = c("Sin experiencia previa", "Con experiencia previa", "Total"),
+           "CH_Correctamente" = c("58,7%", "58,6%", "16.371"),
+           "CH_Más de una vez" = c("41,3%", "41,4%", ""),
+           "CUT_Correctamente" = c("67,4%", "65,5%", "28.378"),
+           "CUT_Más de una vez" = c("32,6%", "34,5%", "")
+         )
+         
+         # Crear la tabla con kable en formato HTML ajustada al nuevo formato
+         kable(tabla0, format = "html", align = "c", 
+               col.names = c("Experiencia previa en INE", "Correctamente", "Más de una vez", "Correctamente", "Más de una vez")) %>%
+           kable_styling(full_width = FALSE, position = "center", 
+                         bootstrap_options = c("striped", "hover"), 
+                         font_size = 16) %>%
+           row_spec(0, bold = TRUE, color = "white", background = "#43418A") %>%  # Encabezado en color
+           row_spec(3, bold = TRUE, background = "#43418A", color = "white") %>%  # Fila "Total" resaltada
+           add_header_above(c(" " = 1, "CH" = 2, "CUT" = 2), bold = TRUE, color = "white", background = "#43418A")  # Encabezados de sección
+```
+
+         
+]
+]
 
 ---
 
@@ -375,7 +418,7 @@ class: inverse, middle
 
 `r fontawesome::fa("folder", height = "3em", fill = "white")`
 
-# Dimensión II: Duración de la encuesta
+# Dimensión II: Duración de la encuesta - CH
 
 ---
 
@@ -426,16 +469,16 @@ kable(tabla, format = "html", align = "c",
 Los hogares donde el Cuestionario del Hogar tuvo una mayor extensión en el tiempo de su entrevista corresponde fundamentalmente a hogares desde 3 personas integrantes.
 
 
-```
- 
-
-
 ]
 
-<<<<<<< HEAD
+
 .panel[.panel-name[Modelo Lineal]
 
 Se aplicó un modelo de regresión lineal para predecir los tiempos de duración del CH
+
+ ```{r rm_plot, out.width='60%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/rm_plot.png")
+ ```
 
 
 ]
@@ -485,17 +528,46 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 
 # Dimensión II: Duración de la encuesta - CUT
 
+
 .panelset[
 .panel[.panel-name[Distribución]
 
-<<<<<<< HEAD
+
 Distribución de tiempos de aplicación entrevistas
 
-=======
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
+ ```{r tiempo_cut, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/tiempo_cut.png")
+ ```
+
 ]
 
+
+
 .panel[.panel-name[Tabla]
+
+```{r  echo=FALSE, results='asis'}
+# Datos de la tabla
+tabla2 <- data.frame(
+  "Medida" = c("Mínimo", "Mediana", "Promedio", "Percentil 25", "Percentil 90", 
+               "Máximo", "Des Est", "N de Casos"),
+  "Sin experiencia previa" = c("05:45", "18:38", "19:22", "15:12", "27:10", 
+                               "58:17", "5,9", "14.292"),
+  "Con experiencia previa" = c("06:19", "17:59", "18:47", "14:40", "26:16", 
+                               "54:01", "5,7", "14.830")
+)
+
+# Crear la tabla con kable en formato HTML ajustada al nuevo formato
+kable(tabla2, format = "html", align = "c", 
+      col.names = c("Medida", "Sin experiencia previa", "Con experiencia previa")) %>%
+  kable_styling(full_width = FALSE, position = "center", 
+                bootstrap_options = c("striped", "hover"), 
+                font_size = 16) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#43418A") %>%  # Encabezado en color
+  row_spec(8, bold = TRUE, background = "#43418A", color = "white")      # Fila "N de Casos" resaltada
+
+```
+
+Las personas encuestadores que tenían experiencia previa en el INE reportan menos tiempos de duración.
 
 ]
 
@@ -517,7 +589,14 @@ class: inverse, middle
 
 # Dimensión III: Flujos de llenado de respuestas
 
+ ```{r waffle, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/waffle_cut.png")
+ ```
+
+
 ---
+
+
 
 
 
@@ -533,6 +612,8 @@ class: inverse, middle
 
 
 ---
+
+# Conclusiones
 
 .panelset[
 .panel[.panel-name[Conclusiones I]
