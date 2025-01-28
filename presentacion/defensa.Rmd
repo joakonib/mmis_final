@@ -152,7 +152,7 @@ knitr::opts_chunk$set(
 
 # Demanda Institucional
 
-## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT con el fin de optimizar futuras mediciones.]
+## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT]
 
 ---
 
@@ -203,13 +203,14 @@ class: inverse, middle
 # Pero antes viajemossss en el tiempo...
 
 
----
+
 ---
 
-```{r profe-berta, out.width='70%', echo = F, fig.align='center'}
-knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/profeberta.JPG")
+#¿Qué enseñanzas podemos extraer?
 
-```
+ ```{r profe-berta, out.width='100%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/profeberta.jpg")
+ ```
 
 ---
 
