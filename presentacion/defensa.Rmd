@@ -3,7 +3,7 @@ title: "Aprovechamiento de paradatos:"
 subtitle: "Aplicaciones dentro de la II Encuesta Nacional Sobre Uso del Tiempo"  
 author: 
   - "Joaquín E. Galdames Hernández"
-date: "27/01/2025"
+date: "28/01/2025"
 output:
   xaringan::moon_reader:
     css: "xaringan-themer.css"
@@ -171,6 +171,30 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 
 ---
 
+
+name: contexto ine
+
+## Contexto Institucional
+
+.panelset[
+.panel[.panel-name[¿Qué es el INE?]
+
+El Instituto Nacional de Estadísticas (INE) es la entidad nacional de estadísticas de Chile y el ente rector del Sistema Estadístico Nacional (SEN). Por esta razón, la información que recolecta y procesa debe cumplir con criterios internacionales y reflejar la complejidad del territorio nacional, tanto en términos de comportamiento poblacional como en aspectos operativos.
+
+Respecto a las Encuestas sobre el Uso del Tiempo, que nacen de la necesidad de cumplir con compromisos internacionales, tales como los acuerdos establecidos en 19° Conferencia Internacional de Estadísticas del Trabajo (ILO, 2013). Además, estas mediciones se encuentran alineadas con los Objetivos de Desarrollo Sostenible (ODS), específicamente con el ODS número 5, que promueve la igualdad de género, contribuyendo así a generar datos relevantes que informen políticas públicas para avanzar en la equidad entre hombres y mujeres (CEPAL, 2024).
+
+]
+.panel[.panel-name[Producción Estadística]
+
+asdf
+
+]
+]
+
+
+---
+
+
 class: inverse, middle
 
 <br>
@@ -183,7 +207,7 @@ class: inverse, middle
 
 ---
 
-name: enfoque
+name: pregunta
 
 ## Pregunta y objetivos de investigación
 
@@ -213,6 +237,60 @@ class: inverse, middle
 <br>
 <br>
 
+`r fontawesome::fa("boxes-packing", height = "3em", fill = "white")`
+
+# Metodología
+
+
+---
+.panelset[
+.panel[.panel-name[Descripción]
+
+- Estudio cuantitativo exploratorio
+
+- Unidad de Análisis: Proceso de recolección de CH y CUT. En particular tiempo de duración de cuestionarios y flujo de llenado de respuestas.
+
+- Fuente de información: Paradatos (generada automáticamente) y posteriormente enriquecida con información respecto a caracterísitcas del hogar y características sociodemográficas de personas encuestadoras.
+
+```{r parad, echo=FALSE, include = T, out.width="60%", out.heigth="60%"}
+library(tidyverse)
+
+test_data <- 
+readRDS(url("https://github.com/joakonib/defensa_tesis/raw/main/input/paradata_f.rds")) %>% 
+  filter(!order %in% c(40,55,56))
+
+test_data %>%
+  kable("html", col.names = colnames(test_data), escape = FALSE) %>%
+  kable_styling(full_width = TRUE, 
+                bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                font_size = 12, 
+                fixed_thead = TRUE) %>%
+  scroll_box(width = "100%", height = "500px")
+
+```
+
+
+]
+]
+
+---
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("bullseye", height = "3em", fill = "white")`
+
+# Resultados
+
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
 `r fontawesome::fa("hourglass-half", height = "3em", fill = "white")`
 
 # Pero antes viajemossss en el tiempo...
@@ -229,11 +307,50 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 
 ---
 
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("list-check", height = "3em", fill = "white")`
+
+# Conclusiones
+
+
+
+---
+
+.panelset[
+.panel[.panel-name[Conclusiones I]
+- La riqueza de la presente investigación radica en qué los errores no muestrales pueden ser descritos y explorados a través de los paradatos. En este sentido el aprovechamiento de este insumo ha permitido profundizar la discusión sobre la calidad del dato y cómo lidiamos con la interacción humana desarrollada entre la persona encuestada y la encuestadora durante el proceso de recolección y/o procesamiento. 
+
+- El uso de los botones no son efectuados de forma correcta en al menos un 30% de las encuestas logradas (40,5% para el Cuestionario del Hogar y un 32,6% en el Cuestionario sobre Uso del Tiempo).
+
+- Los tiempos de duración del CH (15:47 min) aumentan a medida que hay más integrantes en el hogar.Desde el percentil 75 (19:52 min de duración) un 90% de estas encuestas (3.760 de 4.192) corresponde a hogares donde haya al menos 3 integrantes en el hogar.
+
+- Respecto al cuestionario sobre uso del tiempo, es posible dar cuenta que su tiempo promedio (19:04 minutos) de aplicación es más alto que el CH. Y que al igual que el primer instrumento, los tiempos de duración más altos se encuentran enmarcados a los más extensos y en dónde se levanta información más crítica.
+
+- Desafío de buscar otras formas de predecir el tiempo de duración de cuestionario. Pensar un mecanismo de superar los modelos lineales.
+
+]
+
+.panel[.panel-name[Conclusiones II]
+
+- El aprovechamiento de los paradatos ha permitido profundizar la discusión sobre la calidad del dato y cómo lidiamos con la interacción humana desarrollada entre la persona encuestada y la encuestadora durante el proceso de recolección y/o procesamiento
+
+- Significa armar un puzzle más amplio en la investigación, puesto que los desafíos que se plantean para las personas investigadoras requieren una mayor creatividad respecto al entendimiento de los errores no muestrales. 
+
+- Es clave tener en consideración que nunca podremos observar ni medir todo, pero a medida que la tecnología avanza es posible ir encontrando algunos puntos que nos permitan desarrollar lo que efectivamente se necesita; tener datos de calidad que nos permitan acercarnos a la complejidad de la realidad social.
+
+]
+]
+---
+
 class: inverse, center
 
 # ¡Gracias por su tiempo! 🐶
 
-```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
+```{r ciro-image, out.width='60%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/000037.JPG")
 
 ```
