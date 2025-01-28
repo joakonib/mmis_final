@@ -345,15 +345,39 @@ class: inverse, middle
 <br>
 <br>
 
-`r fontawesome::fa("bullseye", height = "3em", fill = "white")`
+`r fontawesome::fa("certificate", height = "3em", fill = "white")`
 
 # Resultados
 
+<br>
+
 <p class="slide-in">
-  <img src="https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/codigos.gif"
-       style="display: block; margin: 0 auto; width: 40%; height: 40%;">
+  <img src="https://raw.githubusercontent.com/joakonib/mmis_final/main/input/codigos.gif"
+       style="display: block; margin: 0 auto; width: 25%; height: 25%;">
 </p>
 
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("folder", height = "3em", fill = "white")`
+
+# Dimensión I: Botones de Tiempo
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("folder", height = "3em", fill = "white")`
+
+# Dimensión II: Duración de la encuesta
 
 ---
 
@@ -370,6 +394,7 @@ class: inverse, middle
 
 ---
 
+
 #¿Qué enseñanzas podemos extraer?
 
  ```{r profe-berta, out.width='100%', echo = F, fig.align='center'}
@@ -377,6 +402,24 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
  ```
 
 ---
+
+
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("folder", height = "3em", fill = "white")`
+
+# Dimensión III: Flujos de llenado de respuestas
+
+---
+
+
+
 
 class: inverse, middle
 
