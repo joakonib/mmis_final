@@ -201,7 +201,6 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 A partir del 2020 el Instituto Nacional de Estadísticas dejó de utilizar la metodología PAPI - Paper and Pencil Interviewing - para la recolección oficial de sus distintos productos estadísticos.
                             
 Para la ejecución y gestión de las encuestas, la institución utiliza la plataforma de Survey Solutions – SuSo por sus siglas. Dentro de esta plataforma es posible encontrar una fuente de insumos llamada los paradatos.
-<<<<<<< HEAD
                             
 ¿Pero qué son los paradatos? Según Callegaro (2013), los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento. Por ejemplo: el orden en que se responde una pregunta dentro de un cuestionario, la fecha y hora del ingreso de esta información. También permiten saber, cuando la persona encuestadora sincronizar esta información hacia los servidores en donde se alojan estas respuestas (Olson & Parkhurst, 2013). 
 ]
@@ -211,7 +210,6 @@ Para la ejecución y gestión de las encuestas, la institución utiliza la plata
 
 
  ```
->>>>>>> bf15d1a2fdd5bc70bbdaf805937e9fa66a427fc6
 
 .panel[.panel-name[¿Qué se midió?]
                                           
