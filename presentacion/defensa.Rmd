@@ -403,6 +403,22 @@ knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/m
 
 ---
 
+# Testeo de Homocedasticidad y Normalidad de los errores
+
+ ```{r plot3, out.width='60%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/plot3.png")
+ ```
+Hay presencia de heterocedasticidad y los errores no se distribuyen de manera normal.
+
+
+---
+# Comparemos distribuciones entre valores observados y predichos
+
+ ```{r plot2, out.width='80%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/plot2.png")
+
+
+ ```
 
 
 ---
