@@ -168,6 +168,51 @@ class: inverse, middle
 
 ---
 
+name: enfoque
+
+## Pregunta y objetivos de investigación
+
+.panelset[
+.panel[.panel-name[Pregunta de Investigación]
+
+## .content-box-purple[¿Qué información sobre los tiempos de duración y el flujo de respuestas en la II ENUT se pueden encontrar a través del uso de paradatos?]
+
+]
+.panel[.panel-name[Objetivos]
+
+### Objetivo General: 
+Explorar características de tiempo de duración y flujo de respuesta de la recolección de la II ENUT a través del aprovechamiento de paradatos.
+
+###Objetivos Específicos: 
+- Explorar en la forma que las respuestas son ingresadas dentro de la II ENUT.
+- Analizar los distintos tiempos de duración en la aplicación de los cuestionarios que forman parte de la II ENUT. 
+
+
+]
+]
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("hourglass-half", height = "3em", fill = "white")`
+
+# Pero antes viajemossss en el tiempo...
+
+
+---
+---
+
+```{r profe-berta, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/profeberta.JPG")
+
+```
+
+---
+
 class: inverse, center
 
 # ¡Gracias por su tiempo! 🐶
@@ -175,5 +220,4 @@ class: inverse, center
 ```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/mmis_final/main/assets/logo/000037.JPG")
 
-En la memoria de Nerón.
 ```
